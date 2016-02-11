@@ -16,13 +16,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit device specific files
-$(call inherit-product, device/samsung/coreprimeve3g/device_coreprimeve3g.mk)
+$(call inherit-product, device/samsung/coreprimeve3g/device_grandprimeve3g.mk)
 
 # Overrides
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_coreprimeve3g
-PRODUCT_DEVICE := coreprimeve3g
+PRODUCT_NAME := full_grandprimeve3g
+PRODUCT_DEVICE := grandprimeve3g
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-G361H
+PRODUCT_MODEL := SM-G531H
 PRODUCT_MANUFACTURER := samsung
 
