@@ -1,10 +1,9 @@
 #
-# system.prop for coreprimeve3g
+# system.prop for grandprimeve3g
 #
 
 ro.sf.lcd_density=240
-ro.sf.lcd_width=154
-ro.sf.lcd_height=90
+
 
 debug.hwui.render_dirty_regions=false
 
