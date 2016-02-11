@@ -18,10 +18,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/coreprimeve3g/coreprimeve3g-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/grandprimeve3g/grandprimeve3g-vendor.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/coreprimeve3g/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/grandprimeve3g/overlay
 
 # Use high-density artwork where available; SM-G361H supports hdpi (high) ~240dpi.
 # However the platform doesn't currently contain all of the bitmaps at hdpi density.
@@ -30,11 +30,11 @@ PRODUCT_AAPT_CONFIG := normal ldpi mdpi hdpi nodpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Set local path
-LOCAL_PATH := device/samsung/coreprimeve3g
+LOCAL_PATH := device/samsung/grandprimeve3g
 
 # Softlink sh
-$(shell mkdir -p $(LOCAL_PATH)/../../../out/target/product/coreprimeve3g/recovery/root/system/bin)
-$(shell ln -sf -t $(LOCAL_PATH)/../../../out/target/product/coreprimeve3g/recovery/root/system/bin ../../sbin/sh)
+$(shell mkdir -p $(LOCAL_PATH)/../../../out/target/product/grandprimeve3g/recovery/root/system/bin)
+$(shell ln -sf -t $(LOCAL_PATH)/../../../out/target/product/grandprimeve3g/recovery/root/system/bin ../../sbin/sh)
 
 # Files to be copied
 # Init
@@ -143,7 +143,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Graphic properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
-    ro.product.hardware=coreprimeve3g
+    ro.product.hardware=grandprimeve3g
 
 # SPRD-SCI default build.prop properties overrides
 PRODUCT_PROPERTY_OVERRIDES := \
