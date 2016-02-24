@@ -23,7 +23,7 @@ $(call inherit-product-if-exists, vendor/samsung/grandprimeve3g/grandprimeve3g-v
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/grandprimeve3g/overlay
 
-# Use high-density artwork where available; SM-G361H supports hdpi (high) ~240dpi.
+# Use high-density artwork where available; SM-G531H supports hdpi (high) ~240dpi.
 # However the platform doesn't currently contain all of the bitmaps at hdpi density.
 # So we do this little trick to fall back to the mdpi version if the hdpi doesn't exist.
 PRODUCT_AAPT_CONFIG := normal ldpi mdpi hdpi nodpi
@@ -46,7 +46,21 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc \
     $(LOCAL_PATH)/rootdir/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
     $(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
-
+	$(LOCAL_PATH)/rootdir/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
+    $(LOCAL_PATH)/rootdir/init:root/init \
+	$(LOCAL_PATH)/rootdir/init.board.rc:root/init.board.rc \
+	$(LOCAL_PATH)/rootdir/init.container.rc:root/init.container.rc \
+	$(LOCAL_PATH)/rootdir/init.environ.rc:root/init.environ.rc \
+	$(LOCAL_PATH)/rootdir/init.grandprimeve3g.rc:root/init.grandprimeve3g.rc \
+	$(LOCAL_PATH)/rootdir/init.grandprimeve3g_base.rc:root/init.grandprimeve3g_base.rc \
+	$(LOCAL_PATH)/rootdir/init.storage.rc:root/init.storage.rc \
+	$(LOCAL_PATH)/rootdir/init.trace.rc:root/init.trace.rc \
+	$(LOCAL_PATH)/rootdir/init.usb.rc:root/init.usb.rc \
+	$(LOCAL_PATH)/rootdir/init.wifi.rc:root/init.wifi.rc \
+	$(LOCAL_PATH)/rootdir/init.zygote32.rc:root/init.zygote32.rc \
+	$(LOCAL_PATH)/rootdir/ueventd.rc:root/ueventd.rc \
+	
+	
 # TWRP
 # PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
@@ -63,6 +77,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl
+	$(LOCAL_PATH)/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -75,6 +90,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/default_gain.conf:system/etc/default_gain.conf \
     $(LOCAL_PATH)/audio/devicevolume.xml:system/etc/devicevolume.xml \
     $(LOCAL_PATH)/audio/formatvolume.xml:system/etc/formatvolume.xml
+	
+# wifi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+	$(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
 
 # Hw Params
 PRODUCT_COPY_FILES += \

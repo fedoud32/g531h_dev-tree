@@ -96,7 +96,7 @@ HAVE_SELINUX := true
 
 # Hardware Rendering
 USE_OPENGL_RENDERER                         := true
-BOARD_EGL_CFG                               := device/samsung/grandprimeve3g/egl/egl.cfg
+BOARD_EGL_CFG                               := device/samsung/coreprimeve3g/egl/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB                   := true
 COMMON_GLOBAL_CFLAGS += -DSC6820I_HWC -DBOARD_EGL_NEEDS_LEGACY_FB
 
